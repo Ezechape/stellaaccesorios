@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f7">
+  <meta name="description" content="Stella Accesorios: collares, pulseras y aritos para brillar con tu propio estilo.">
+  <title>Stella Accesorios | Brillá con tu propio estilo</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--pink:#ed1680;--pink2:#ffe0ec;--pale:#fff5f8;--wine:#830b42;--ink:#54213b;--muted:#946a7d;--white:#fff;--line:#f4d5e1;--shadow:0 12px 35px #7d214014}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#fffdfd;color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none} button{font:inherit}.topbar{background:var(--wine);color:white;text-align:center;padding:9px 16px;font-size:.8rem;letter-spacing:.04em}
+    header{position:sticky;top:0;z-index:10;background:#fffafcF2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:"Playfair Display",serif;font-weight:700;font-size:1.35rem;color:var(--wine)}
+    .logo{width:54px;height:54px;border:2px solid #ef8ab7;background:#ffe3ef;border-radius:50%;display:grid;place-items:center;text-align:center;line-height:1.05;color:var(--wine);font-family:"Playfair Display",serif;font-size:.88rem;box-shadow:inset 0 0 0 4px #fff5f9}
+    .logo small{display:block;font: .48rem "DM Sans",sans-serif;letter-spacing:.06em}
+    .navlinks{display:flex;gap:26px;align-items:center;font-size:.92rem;font-weight:600}.navlinks a:hover{color:var(--pink)}
+    .pill{display:inline-flex;justify-content:center;align-items:center;gap:9px;background:var(--pink);color:white;padding:13px 22px;border-radius:999px;font-weight:700;border:0;cursor:pointer;transition:.2s;box-shadow:0 7px 18px #ed16802b}
+    .pill:hover{transform:translateY(-2px);background:#d90e70}.pill.outline{background:white;color:var(--wine);border:1px solid var(--line);box-shadow:none}
+    .hero{background:linear-gradient(105deg,#ffe9f1 0%,#fff4f7 48%,#f6c9d9 100%);overflow:hidden}
+    .hero-inner{max-width:1180px;margin:auto;padding:56px 22px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:34px;min-height:440px}
+    .eyebrow{color:var(--pink);text-transform:uppercase;letter-spacing:.17em;font-weight:700;font-size:.76rem}
+    h1,h2,h3{font-family:"Playfair Display",serif} h1{font-size:clamp(2.6rem,5vw,4.7rem);line-height:1.04;margin:13px 0 18px;color:var(--wine);letter-spacing:-.035em}
+    .hero p{font-size:1.08rem;line-height:1.7;color:#7d4b62;max-width:420px;margin-bottom:26px}
+    .hero-photo{position:relative;min-height:330px;border-radius:34px 34px 100px 34px;overflow:hidden;box-shadow:var(--shadow);border:8px solid #ffffff8a}
+    .hero-photo img{width:100%;height:100%;min-height:330px;position:absolute;inset:0;object-fit:cover}
+    .sparkle{position:absolute;color:var(--pink);font-size:2rem;z-index:1}.sparkle.one{top:14px;left:16px}.sparkle.two{bottom:18px;right:22px}
+    section{scroll-margin-top:95px}.section{max-width:1180px;margin:auto;padding:58px 22px}.section-head{text-align:center;margin-bottom:28px}.section-head h2{font-size:clamp(2rem,4vw,2.8rem);color:var(--wine);margin:8px 0}.section-head p{color:var(--muted);margin:0}
+    .categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .category{height:220px;position:relative;overflow:hidden;border-radius:20px;background:#f9dce7;box-shadow:var(--shadow)}
+    .category img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.category:hover img{transform:scale(1.05)}
+    .category span{position:absolute;bottom:13px;left:13px;right:13px;background:#fffaf4ed;border-radius:999px;padding:12px 16px;color:var(--wine);font-family:"Playfair Display",serif;font-size:1.2rem;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+    .catalog-wrap{background:var(--pale)}.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:0 0 28px}
+    .filter{border:1px solid var(--line);background:white;color:var(--wine);padding:9px 16px;border-radius:999px;cursor:pointer;font-weight:600}.filter.active,.filter:hover{background:var(--wine);color:white;border-color:var(--wine)}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .product{background:white;border:1px solid #f5e2e9;border-radius:18px;overflow:hidden;box-shadow:0 7px 22px #7d21400b;display:flex;flex-direction:column}
+    .product img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#f8e6ed}
+    .product-info{padding:14px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+    .product h3{font-size:1.08rem;margin:0 0 7px;color:var(--wine)}.price{font-size:.95rem;color:var(--pink);font-weight:700;margin:0 0 13px}.product .pill{width:100%;font-size:.82rem;padding:11px 10px;margin-top:auto}
+    .note{font-size:.78rem;color:var(--muted);margin:18px 0 0;text-align:center}
+    .contact{max-width:1120px;margin:52px auto;padding:0 22px}.contact-inner{border-radius:28px;background:linear-gradient(120deg,#ffe0ec,#fff1f6);padding:34px;display:flex;align-items:center;justify-content:space-between;gap:22px;overflow:hidden}
+    .contact h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:0 0 8px;color:var(--wine)}.contact p{color:#80516a;margin:0}
+    footer{border-top:1px solid var(--line);background:#fff8fb;padding:28px 22px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.footer-brand{font-family:"Playfair Display",serif;font-weight:700;color:var(--wine)}.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem}.copyright{width:100%;text-align:center;color:#aa8294;font-size:.76rem;margin-top:10px}
+    .empty{grid-column:1/-1;text-align:center;padding:30px;color:var(--muted)}
+    @media(max-width:850px){.hero-inner{grid-template-columns:1fr;padding-top:40px}.hero-photo{min-height:280px}.hero-photo img{min-height:280px}.products{grid-template-columns:repeat(2,1fr)}.navlinks{gap:14px}.categories .category{height:180px}}
+    @media(max-width:560px){.topbar{font-size:.7rem}.nav{padding:10px 15px}.brand{font-size:1.05rem;gap:8px}.logo{width:45px;height:45px;font-size:.76rem}.navlinks a:not(.insta){display:none}.navlinks .pill{padding:10px 13px;font-size:.8rem}.hero-inner{padding:36px 18px;gap:22px}.hero-photo,.hero-photo img{min-height:235px}.section{padding:43px 16px}.categories{gap:9px}.category{height:142px!important;border-radius:14px}.category span{font-size:.93rem;left:7px;right:7px;bottom:7px;padding:9px 10px}.products{gap:12px}.product-info{padding:11px}.product h3{font-size:.98rem}.product .pill{font-size:.75rem}.contact{padding:0 15px;margin:36px auto}.contact-inner{padding:25px 20px;flex-direction:column;align-items:flex-start}.footer-inner{justify-content:center;text-align:center}.footer-links{justify-content:center}}
+  </style>
+</head>
+<body>
+  <div class="topbar">✨ Accesorios para acompañarte todos los días ✨</div>
+  <header>
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Stella Accesorios, inicio">
+        <span class="logo">Stella<small>Accesorios</small></span><span>Stella Accesorios</span>
+      </a>
+      <div class="navlinks">
+        <a href="#catalogo">Catálogo</a><a href="#categorias">Categorías</a><a href="#contacto">Contacto</a>
+        <a class="insta" href="https://www.instagram.com/stellaaccesorios__/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Bienvenida a Stella ✨</div>
+          <h1>Brillá con tu<br>propio estilo</h1>
+          <p>Accesorios elegidos con amor para darle ese toque especial a cada uno de tus días.</p>
+          <a class="pill" href="#catalogo">Ver catálogo <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-photo">
+          <span class="sparkle one">✦</span><span class="sparkle two">✧</span>
+          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1100&q=85" alt="Collares y accesorios dorados" onerror="this.src='https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1100&q=85'">
+        </div>
+      </div>
+    </section>
+    <section class="section" id="categorias">
+      <div class="section-head"><div class="eyebrow">Encontrá tus favoritos</div><h2>Un detalle que habla de vos</h2><p>Elegí la categoría que más va con tu estilo.</p></div>
+      <div class="categories">
+        <a class="category" href="#catalogo" data-jump="Collares"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80" alt="Collares"><span>Collares <b>→</b></span></a>
+        <a class="category" href="#catalogo" data-jump="Pulseras"><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80" alt="Pulseras"><span>Pulseras <b>→</b></span></a>
+        <a class="category" href="#catalogo" data-jump="Aritos"><img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80" alt="Aritos"><span>Aritos <b>→</b></span></a>
+      </div>
+    </section>
+    <section class="catalog-wrap" id="catalogo">
+      <div class="section">
+        <div class="section-head"><div class="eyebrow">Elegidos para vos</div><h2>Favoritos de Stella 💗</h2><p>¿Te gustó alguno? Escribinos para consultar disponibilidad.</p></div>
+        <div class="filters" aria-label="Filtrar productos">
+          <button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Collares">Collares</button><button class="filter" data-filter="Pulseras">Pulseras</button><button class="filter" data-filter="Aritos">Aritos</button>
+        </div>
+        <div class="products" id="products"></div>
+        <p class="note">Fotos ilustrativas de ejemplo. Reemplazalas por las fotos de tus productos reales antes de publicar.</p>
+      </div>
+    </section>
+    <section class="contact" id="contacto">
+      <div class="contact-inner">
+        <div><div class="eyebrow">Estamos para ayudarte</div><h2>¿Te enamoraste de alguno? 💕</h2><p>Consultanos por WhatsApp o encontranos en Instagram.</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="pill" id="contact-wa" href="#" target="_blank" rel="noopener">☏ Hablar por WhatsApp</a><a class="pill outline" href="https://www.instagram.com/stellaaccesorios__/" target="_blank" rel="noopener">♡ Ver Instagram</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><div class="footer-brand">Stella Accesorios ✦</div><div class="footer-links"><a href="https://www.instagram.com/stellaaccesorios__/" target="_blank" rel="noopener">@stellaaccesorios__ ↗</a><span>Efectivo / Transferencia</span></div><div class="copyright">© <span id="year"></span> Stella Accesorios · Hecho con amor 💗</div></div></footer>
+  <script>
+    // PERSONALIZÁ ESTOS DATOS ANTES DE PUBLICAR:
+    const WHATSAPP_NUMBER = ""; // Ejemplo: "5493442000000" (Argentina, sin +, espacios ni guiones)
+    const INSTAGRAM_URL = "https://www.instagram.com/stellaaccesorios__/";
+    const CURRENCY = "$";
+    // Reemplazá nombres, precios y fotos por los productos reales de Stella.
+    // Para cada imagen, podés usar una URL pública o un archivo dentro de la carpeta assets.
+    const products = [
+      {name:"Collar Mariposa",category:"Collares",price:"Consultar precio",image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=650&q=80"},
+      {name:"Collar Delicado",category:"Collares",price:"Consultar precio",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=650&q=80"},
+      {name:"Pulsera Dorada",category:"Pulseras",price:"Consultar precio",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=650&q=80"},
+      {name:"Pulsera con Detalles",category:"Pulseras",price:"Consultar precio",image:"https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=650&q=80"},
+      {name:"Aritos Dorados",category:"Aritos",price:"Consultar precio",image:"https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=650&q=80"},
+      {name:"Aritos Corazón",category:"Aritos",price:"Consultar precio",image:"https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=650&q=80"},
+      {name:"Collar Especial",category:"Collares",price:"Consultar precio",image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=650&q=80"},
+      {name:"Pulsera Minimal",category:"Pulseras",price:"Consultar precio",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=650&q=80"}
+    ];
+    function waLink(productName){
+      const msg = `¡Hola Stella! 💗 Quiero consultar por: ${productName}. ¿Está disponible?`;
+      return WHATSAPP_NUMBER
+        ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`
+        : `https://www.instagram.com/stellaaccesorios__/`;
+    }
+    function renderProducts(filter="Todos"){
+      const container=document.getElementById("products");
+      const filtered=products.filter(p=>filter==="Todos"||p.category===filter);
+      container.innerHTML=filtered.map(p=>`<article class="product">
+        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
+        <div class="product-info"><h3>${p.name}</h3><p class="price">${p.price}</p>
+        <a class="pill" href="${waLink(p.name)}" target="_blank" rel="noopener">♡ Consultar / comprar</a></div>
+      </article>`).join("");
+    }
+    document.querySelectorAll("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{
+      document.querySelectorAll("[data-filter]").forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active");renderProducts(btn.dataset.filter);
+    }));
+    document.querySelectorAll("[data-jump]").forEach(link=>link.addEventListener("click",()=>{
+      document.querySelectorAll("[data-filter]").forEach(b=>{b.classList.toggle("active",b.dataset.filter===link.dataset.jump)});
+      renderProducts(link.dataset.jump);
+    }));
+    const contactWa=document.getElementById("contact-wa");
+    contactWa.href=WHATSAPP_NUMBER?`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("¡Hola Stella! Quería consultar por sus accesorios 💗")}`:INSTAGRAM_URL;
+    document.getElementById("year").textContent=new Date().getFullYear();
+    renderProducts();
+  </script>
+</body>
+</html>
